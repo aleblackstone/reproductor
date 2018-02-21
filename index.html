@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YouTubo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/Glyphter.css">
+</head>
+<body>
+    <div id="cabecera">
+        <img src="images/logo.svg" alt="Logo de la empresa">
+        <h2>YouTubo</h2>
+        <div id="login" class="icon-login"></div>
+    </div>
+    <div id="container">
+        <div id="reproductor">
+
+        </div>
+        <div id="colaReproduccion" class="colaReproduccion">
+
+        </div>
+        <div id="controles">
+            <div id="controlReproduccion">
+                <p class="icon-play" onclick="reanudarVideo()"></p>
+                <p class="icon-pausa" onclick="pausarVideo()"></p>
+            </div>
+            <div id="controlTiempo">
+                <p class="icon-videoAnterior" onclick="videoAnterior()"></p>
+                <p class="icon-atras" onclick="atrasarVideo()"></p>
+                <p class="icon-alante" onclick="adelantarVideo()"></p>
+                <p class="icon-siguienteVideo" onclick="videoSiguiente()"></p>
+            </div>
+            <div id="controlvolumen">
+                <p class="icon-mute" onclick="sileciarVideo()"></p>
+                <p class="icon-menosVolumen" onclick="bajarVolumen()"></p>
+                <p class="icon-masVolumen" onclick="subirVolumen()"></p>
+                <p class="icon-todoVolumen" onclick="todoVolumen()"></p>
+            </div>
+        </div>
+    </div>
+    <div id="pie">
+        <img src="images/cc.png" alt=""><label for="">Diseñado por Alejandro Cordero</label>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

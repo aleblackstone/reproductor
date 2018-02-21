@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#cabecera{
+    background: lightgray;
+    width: 100%;
+    height: 17%;
+}
+
+#cabecera img{
+    width: 12em;
+}
+
+#container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-flow: wrap;
+    background: lightgray;
+}
+
+#reproductor{
+    width: 75%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+#controles{
+    width: 75%;
+    height: 10%;
+    display: flex;
+}
+
+#controles p {
+    margin: 7px;
+    zoom: 1.5;
+}
+
+#controlReproduccion{
+    display: flex;
+    margin-left: 20%;
+}
+
+#controlTiempo{
+    display: flex;
+    margin-left: 5em;
+}
+
+#controlvolumen{
+    display: flex;
+    margin-left: 5em;
+}
+
+
+#colaReproduccion{
+    width: 25%;
+    height: 90%;
+}
+
+#pie{
+    background: lightgray;
+    width: 100%;
+    height: 7%;
+}
+
+#login{
+    text-align: right;
+    margin-top: -22px;
+    margin-right: 15px;
+    zoom: 4;
+}
+
+h2 {
+    text-align: center;
+    font-size: 70px;
+    margin-top: -80px;
+}
+
+.reproduciendo{
+    background: #3a7999;
+    color: #f2f2f2;
+    padding: 5px;
+}
+
+.remarcar:hover{
+    background: purple;
+    color: #f2f2f2;
+    padding: 3px;
+    zoom: 1.1;
+}
+
+#controles p{
+    border: none;
+    background: #3a7999;
+    color: #f2f2f2;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+}
+
+#controles p:hover{
+    background: rgba(0,0,0,0);
+    color: #3a7999;
+    box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+#iconoReproduciendo{
+    position: relative;
+    top: 3px;
+    margin-left: 5px;
+    zoom: 1.5;
+}
+
+#pie{
+
+}
+
+#pie label {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 414px){
+    #cabecera{
+        zoom: 0.5;
+        width: 100%;
+        height: 10%;
+    }
+
+    #controles{
+        zoom: 0.5;
+        flex-flow: column;
+        height: 18%;
+        position: absolute;
+        bottom: 0;
+        margin-left: 100px;
+    }
+
+    #reproductor{
+        width: 100%;
+    }
+
+    #video{
+        width: 350px;
+    }
+
+    #container{
+        width: 100%;
+        height: 100%;
+    }
+
+    #colaReproduccion{
+        width: 100%;
+        height: 30%;
+    }
+
+    #pie{
+        position: absolute;
+        top: 90em;
+        zoom: 0.6;
+        font-size: 18px;
+    }
+}

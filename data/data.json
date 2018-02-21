@@ -1,0 +1,52 @@
+[
+    {
+        "titulo": "Goles partido Champions",
+        "src": "recursos/partido.mp4",
+        "tipo" : "video"
+    },
+    {
+        "titulo": "El perro más feliz del mundo",
+        "src": "recursos/perro.mp4",
+        "tipo" : "video"
+    },
+    {
+        "titulo": "El perro más feliz del mundo",
+        "src": "recursos/perro.webm",
+        "tipo" : "video"
+    },
+    {
+        "titulo": "El perro más feliz del mundo",
+        "src": "recursos/perro.ogg",
+        "tipo" : "video"
+    },
+    {
+        "titulo": "21 Guns, Green Day",
+        "src": "recursos/21Guns.mp4",
+        "tipo" : "video"
+    },
+    {
+        "titulo": "rockstar, Post Malone",
+        "src": "recursos/rockstar.mp4",
+        "tipo" : "video"
+    },
+    {
+        "titulo": "Congratulation, Post Malone",
+        "src": "recursos/congratulation.mp3",
+        "tipo" : "audio"
+    },
+    {
+        "titulo": "Diamonds, Rihana",
+        "src": "recursos/diamonds.mp3",
+        "tipo" : "audio"
+    },
+    {
+        "titulo": "Le her go, Passenger",
+        "src": "recursos/passenger.mp3",
+        "tipo" : "audio"
+    },
+    {
+        "titulo": "See you again, Wiz Khalifa",
+        "src": "recursos/seeYou.mp3",
+        "tipo" : "audio"
+    }
+]

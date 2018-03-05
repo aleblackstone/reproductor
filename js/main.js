@@ -7,7 +7,7 @@ window.onload = function(){
 }
 
 function leerJson(){
-    readTextFile("../data/data.json", function(text){
+    readTextFile("/reproductor/data/data.json", function(text){
         data = JSON.parse(text);
     }); 
 }

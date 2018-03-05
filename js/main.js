@@ -2,7 +2,7 @@ let data;
 let videosVistos = 0;
 window.onload = function(){
     leerJson();
-    let aux = setTimeout(main,50);
+    let aux = setTimeout(main,200);
     
 }
 

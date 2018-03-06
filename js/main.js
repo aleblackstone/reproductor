@@ -7,9 +7,16 @@ window.onload = function(){
 }
 
 function leerJson(){
+    /*
+    readTextFile("../data/data.json", function(text){
+        data = JSON.parse(text);
+    });
+    */
+    
     readTextFile("/reproductor/data/data.json", function(text){
         data = JSON.parse(text);
     }); 
+    
 }
 
 function readTextFile(file, callback) {
@@ -32,7 +39,7 @@ function main(){
 
 function crearVideo(){
     $("#reproductor").append(
-        '<video id="video" src="'+ data[videosVistos]["src"] +'"></video>'
+        '<video id="video" class="video" src="'+ data[videosVistos]["src"] +'"></video>'
     )
     document.getElementById("video").play();
     videosVistos++;
@@ -50,16 +57,23 @@ function crearPlayList(){
             tipo = "icon-audio"
 
         $("#colaReproduccion").append(
-            '<p class="remarcar">'+
+            '<div class="remarcar elementoReproductor" onclick="mostrarVideo(this)">'+
                 '<label class="'+tipo+'"/>'+
-                '<label onclick="mostrarVideo(event)" data="'+ i + '">'+ data[i]["titulo"]+ '</label>'+
-            '</p>'
+                '<label data="'+ i + '">'+ data[i]["titulo"]+ '</label>'+
+            '</div>'
         )
+        //$(".elementoReproductor").on("click", mostrarVideo(event))
     }
 }
 
 function mostrarVideo(){
-    let indiceVideo = event.target.attributes[1]["value"];
+    let indiceVideo
+    if( event.target.attributes.length == 1){
+         indiceVideo = event.target.attributes[0]["value"];
+    }
+    else{
+         indiceVideo = event.target.attributes[1]["value"];
+    }
 
     if(indiceVideo == "videoAnterior()"){
         indiceVideo = videosVistos--;
@@ -105,7 +119,7 @@ function marcarReproduciendo(video){
         video = video -2;
 
     $(aux[video]).removeClass();
-    $(aux[video]).addClass("reproduciendo");
+    $(aux[video]).addClass("reproduciendo elementoReproductor");
     $(aux[video]).append(
         '<label class="icon-todoVolumen" id="iconoReproduciendo">'
     );
@@ -115,7 +129,7 @@ function desmarcar(){
     let aux= $(".colaReproduccion").children();
     for(let i=0; i < aux.length; i++){
         $(aux[i]).removeClass();
-        $(aux[i]).addClass("remarcar");
+        $(aux[i]).addClass("remarcar elementoReproductor");
         $("#iconoReproduciendo").remove();
     }    
 }

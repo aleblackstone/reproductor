@@ -39,6 +39,10 @@ body{
     background: black;
 }
 
+#video{
+    width: 100%;
+}
+
 #controles{
     width: 75%;
     height: 10%;
@@ -46,23 +50,28 @@ body{
 }
 
 #controles p {
-    margin: 7px;
-    zoom: 1.5;
+    padding: 7px;
+    margin-left: 4px;
+    width: 50px;
+    height: 50px;
 }
 
 #controlReproduccion{
     display: flex;
-    margin-left: 20%;
+    margin-left: 15%;
+    justify-content: space-around;
 }
 
 #controlTiempo{
+    margin-left: 5%;
     display: flex;
-    margin-left: 5em;
+    justify-content: space-around;
 }
 
 #controlvolumen{
     display: flex;
-    margin-left: 5em;
+    margin-left: 5%;
+    justify-content: space-around;
 }
 
 
@@ -75,6 +84,11 @@ body{
     background: lightgray;
     width: 100%;
     height: 7%;
+}
+
+#pie img{
+    width: 10%;
+    height: 100%;
 }
 
 #login{
@@ -128,53 +142,84 @@ h2 {
     zoom: 1.5;
 }
 
-#pie{
-
-}
 
 #pie label {
     margin-left: 40px;
     font-size: 25px;
 }
 
-@media screen and (max-width: 414px){
-    #cabecera{
-        zoom: 0.5;
-        width: 100%;
-        height: 10%;
-    }
+#powered{
+    position: relative;
+    bottom: 10px;
+}
 
-    #controles{
-        zoom: 0.5;
-        flex-flow: column;
-        height: 18%;
-        position: absolute;
-        bottom: 0;
-        margin-left: 100px;
-    }
-
+@media screen and (max-width: 1250px){
     #reproductor{
         width: 100%;
-    }
-
-    #video{
-        width: 350px;
-    }
-
-    #container{
-        width: 100%;
-        height: 100%;
+        flex-wrap: nowrap;
     }
 
     #colaReproduccion{
+        position: relative;
+        top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
         width: 100%;
-        height: 30%;
+        height: 60%;
+        padding-bottom: 50px;
+    }
+
+    .elementoReproductor{
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        padding: 3px;
+        width: 50%;
+    }
+
+    #controles{
+        position: relative;
+        bottom: 220px;
     }
 
     #pie{
+        position: fixed;
+        bottom: 0;
+        height: 4%;
+    }
+}
+
+@media (max-width: 734px){
+    #controles{
         position: absolute;
-        top: 90em;
+        top: 60%;
+        left: 10%;
+        flex-flow: column;
+        align-content: space-around;
+        height: 200px;
+        zoom: 0.7;
+    }
+
+    #cabecera {
+        height: 50px;
+    }
+
+    #controles div{
+        margin-top: 10px;
+    }
+
+    #cabecera img{
+        width: 25%;
+    }
+
+    #cabecera h2{
         zoom: 0.6;
-        font-size: 18px;
+    }
+
+    #login{
+        width: 40px;
+        float: right;
+        margin-top: -28px;
+        zoom: 1.6;
     }
 }
